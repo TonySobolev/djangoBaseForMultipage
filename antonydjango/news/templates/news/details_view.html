@@ -1,0 +1,17 @@
+{%  extends  'mainapp/layout.html'  %}
+
+
+{% block title %}{{ newarticle.title }}{% endblock %}
+
+{% block content %}
+    <div class="features">
+
+        <h1>{{ newarticle.title }}</h1>
+        <p>{{ newarticle.date }}</p>
+        <p>{{ newarticle.anons }}</p>
+        <p>{{ newarticle.full_text }}</p>
+
+
+    </div>
+
+{% endblock %}

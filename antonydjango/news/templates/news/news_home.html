@@ -1,0 +1,25 @@
+{%  extends  'mainapp/layout.html'  %}
+
+
+{% block title %}PAge for news of our company{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>PAge for news of our company</h1>
+
+        {% if news %}
+            {% for el in news %}
+                <div class="alert-warning">
+                    <h3>{{ el.title }}</h3>
+                    <p>{{ el.anons }}</p>
+                    <a href="{% url 'news-detail' el.id %}" class="btn btn-warning">Click to read full</a>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>No articles here, sorry!!</p>
+        {% endif %}
+
+        {# comnnet section looks so #}
+    </div>
+
+{% endblock %}

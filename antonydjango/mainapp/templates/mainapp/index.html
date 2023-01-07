@@ -1,0 +1,32 @@
+{%  extends  'mainapp/layout.html'  %}
+
+
+{% block title %}{{title}}{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>{{title}}</h1>
+        <p>lorem ipsum </p>
+        <button class="btn btn-warning">To the moon</button>
+
+        {% for val in values %}
+            {% if val == 12345 or val == 'Hello' %}
+                {% filter upper %}
+                    <p>{{ val }}</p>
+                {% endfilter %}
+            {% endif %}
+        {% endfor %}
+
+        {{ obj }}
+
+         {% for var in obj %}
+            <p>{{ var|upper }}</p>
+
+        {% endfor %}
+
+
+
+        {{values}}
+    </div>
+
+{% endblock %}
