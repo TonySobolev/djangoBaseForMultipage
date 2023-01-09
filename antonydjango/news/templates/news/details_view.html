@@ -10,6 +10,8 @@
         <p>{{ newarticle.date }}</p>
         <p>{{ newarticle.anons }}</p>
         <p>{{ newarticle.full_text }}</p>
+        <a href="{% url 'news-delete' newarticle.id %}" class="btn btn-danger">Delete</a>
+        <a href="{% url 'news-update' newarticle.id %}" class="btn btn-info">Update</a>
 
 
     </div>
